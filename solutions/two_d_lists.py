@@ -58,12 +58,12 @@ def first_elements(two_d_list):
 
 # TODO: Implement a function that returns a list of lists, where each inner list contains the elements of the original sublists that are at even indices
 def even_elements_sublists(two_d_list):
-    list = []
-    for i in range(0,len(two_d_list)):
-        while (i < len(two_d_list[0])):
-            list.append(two_d_list[i])
-            i=i+2
-    return list
+    result = []
+    for sublist in two_d_list:
+        even_elements = sublist[::2]
+        result.append(even_elements)
+    return result
+
 
 # TODO: Implement a function that concatenates all sublists in a two-dimensional list into a single list
 def concatenate_sublists(two_d_list):
